@@ -1,39 +1,50 @@
-const Product = require('../model/Product.model');
+const Role = require('../model/role.model');
 
 const getAll = (req,res,next) => {
-    let result = Product.getAll(req,res,next);
+    let result = Role.getAll(req,res,next);
     res.status(200).json(result);
 }
 
 const getByName = (req, res, next) => {
-    let result = Product.getByName(req.params.id);
+    let result = Role.getByName(req.params.id);
     res.status(200).json(result); 
 }
 
 const creat = (req,res,next) => {
-    let result = Product.create({
+    let result = Role.create({
         name: req.body.name,
-        description: req.body.description,
-        userId: req.payload.id
     }
 
     )
     res.status(201).json(result);
 }
 
+const createUserRole = (req,res,next) => {
+    let result = Role.create({
+        UserId: req.body.UserId,
+        RoleId: req.body.RoleId,
+    }
+
+    )
+    res.status(201).json(result);
+}
+
+
+
 const remove = (req,res,next) => {
-    let result = Product.remove(req.params.id);
+    let result = Role.remove(req.params.id);
     res.status(200).json(result);
 }
 
 const update = (req,res,next) => {
-    let result = Product.update(req.params.id, req.body);
+    let result = Role.update(req.params.id, req.body);
     res.status(200).json(result);
 }
 
 module.exports = {
     getAll,
     creat,
+    createUserRole,
     getByName,
     remove,
     update

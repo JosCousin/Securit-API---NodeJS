@@ -28,6 +28,9 @@ const create = (product) => {
     if (product.description) {
         newProduct.description = product.description;
     }
+    if (product.userId) {
+        newProduct.userId = product.userId;
+    }
 
     listProduct.push(newProduct);
     save();
