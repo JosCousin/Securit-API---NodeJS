@@ -1,0 +1,27 @@
+08/04/2025 12:26:01 POST /auth/user ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:26:09 POST /auth/login ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:26:19 POST /user/ ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:28:59 POST /auth/login ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:29:34 PUT /user/role/5/2 ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:30:46 PUT /auth/login ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:30:50 POST /auth/login ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:31:12 POST /user/role/5/2 ::1 
+ application/json 
+ {"email":"test","password":"********"}
+08/04/2025 12:31:16 PUT /user/role/5/2 ::1 
+ application/json 
+ {"email":"test","password":"********"}

@@ -19,18 +19,6 @@ const creat = (req,res,next) => {
     res.status(201).json(result);
 }
 
-const createUserRole = (req,res,next) => {
-    let result = Role.create({
-        UserId: req.body.UserId,
-        RoleId: req.body.RoleId,
-    }
-
-    )
-    res.status(201).json(result);
-}
-
-
-
 const remove = (req,res,next) => {
     let result = Role.remove(req.params.id);
     res.status(200).json(result);
@@ -44,7 +32,6 @@ const update = (req,res,next) => {
 module.exports = {
     getAll,
     creat,
-    createUserRole,
     getByName,
     remove,
     update

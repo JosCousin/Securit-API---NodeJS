@@ -20,7 +20,7 @@ const login = (req, res, next) => {
         return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const token = jwt.sign({ id: user.id, email: user.email }, process.env.JWT_KEY);
+    const token = jwt.sign({ id: user.id, email: user.email, roles: user.roles }, process.env.JWT_KEY);
 
     res.status(200).json({ token });
 };

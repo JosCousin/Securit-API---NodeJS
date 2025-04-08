@@ -29,16 +29,8 @@ const create = (UserId, RoleID) => {
     save();
     return newrole;
 }
-const createUserRole = (role) => { 
-    let newrole = {id: ++currentId};
-    if (role.name) {
-        newrole.name = role.name;
-    }
 
-    listRole.push(newrole);
-    save();
-    return newrole;
-}
+
 
 const update = (id, role) => { 
     let roleToUpdate = listRole.find(role => role.id === parseInt(id));
